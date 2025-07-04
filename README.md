@@ -1,10 +1,14 @@
-## This project shows how LLMs such as ChatGPT can be deployed locally for enterprise applications. 
+## Enterprise Deployment of LLMs: A Case Study of ChatGPT Local Deployment for Enterprise Applications
+
+#### This project shows how LLMs such as ChatGPT can be deployed locally for enterprise applications. 
 ---
-Intending users are free to clone the project under the generic MIT License and deploy it locally using Docker. The requirement.txt and the Docker file that will aid the deployment are part of the code. Django was used as the backend server database. It is used to store usernames and other encrypted vital information of enterprise users. It is also used to store and track the number of ChtaGPT tokens used across the enterprise. On the front end, sqlite is used to persist vital front end data
+Intending users are free to clone the project under the generic MIT License and deploy it locally using Docker. The requirement.txt and the Docker file that will aid the deployment are part of the code. Django was used as the backend server database. It is used to store usernames and other vital encrypted information of enterprise users. It is also used to store and track the number of ChatGPT tokens used across the enterprise. On the front end, sqlite is used to persist vital front end data. Vue was used to provide more front end functionalities for enterprise users. 
 ---
-The code here shows a Docker based deployment for only a single use application. To transition it to enterprise usage, users can deploy the application on Docker in cloud kubernetes containers; e.g. K8s in their cloud platform of choice. To satisfy enterprise usage when number of users increases, multiple pods of the initially K8s instance can then be created as need arises. 
+## Enterprise Deployment
 ---
-Examples of usage and how the application displays on the single-use Docker instance are availble in the images below: 
+#### The code here shows a Docker based (front end UI and the back end server) deployment for only a single use application. To transition it to enterprise usage, enterprise solution architects can deploy the application on Docker in cloud kubernetes pods (e.g. K8s) in their cloud platform of choice. To satisfy enterprise usage when number of users increases, multiple pods of the initial K8s instance can then be created as need arises. Nginx or other load balancers can then be used to direct traffics to the kubernetes pods. 
+---
+Examples of usage and how the application front end displays on the single-use Docker instance are availble in the images below: 
 ---
 <img width="1430" height="722" alt="Image" src="https://github.com/user-attachments/assets/9cb9f969-ff46-4eaa-9702-15ab11f94d2e" />
 ---
