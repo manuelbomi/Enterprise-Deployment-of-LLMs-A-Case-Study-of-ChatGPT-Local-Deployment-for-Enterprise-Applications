@@ -1,0 +1,6 @@
+# gc .env | ? { $_ -notmatch '^\s*(#|$)' } | % { $name, $value = $_.split('='); [Environment]::SetEnvironmentVariable($name, $value) }
+# $arguments = if ($args) { $args -join ' '} else { '' }
+
+docker compose down -v
+
+docker compose up $args

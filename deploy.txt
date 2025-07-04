@@ -1,0 +1,1 @@
+docker run --rm -it --net=host -v "${HOME}/.kube:/helm/.kube" -v "${HOME}/.config/helm:/helm .config/helm" -v "${PWD}:/wd" --workdir /wd ghcr.io/helmfile/helmfile:v0.149.0 /bin/bash -c "cd /wd; helm install --namespace $1 --create-namespace -f chat-gpt-chart/Values.yaml $1 chat-gpt-chart"

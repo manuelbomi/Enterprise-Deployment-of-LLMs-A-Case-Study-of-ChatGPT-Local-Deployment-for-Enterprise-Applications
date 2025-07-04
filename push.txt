@@ -1,0 +1,5 @@
+# gc .env | ? { $_ -notmatch '^\s*(#|$)' } | % { $name, $value = $_.split('='); [Environment]::SetEnvironmentVariable($name, $value) }
+# dir env:
+
+docker compose --env-file=.env push $args
+
